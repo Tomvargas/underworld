@@ -24,13 +24,13 @@ client.on("message", function (message) {
     /*============================================================================
                                         COMMANDS
     ==============================================================================*/
-    //------------------------------------------------------------------------------> System info
+    //------------------------------------------------------------------------------> System help
     if (command.toLowerCase() === "help") {
         const user = message.author.username;
-        const data = "commands";
+        const data = "**COMANDOS**\n**normal**\n```+help``` > Sistema de ayuda.\n```+linkstart``` > Entrar en Player Mode.\n```+profile``` > Perfil del jugador.\n**combates**\n```+combat``` > Solicitar duelo a un jugador.\n```+combatinfo``` > información sobre el sistema de combates.\n";
         const embd = new Discord.MessageEmbed().setTitle('Hola ' + user + ', estas en el sistema de ayuda.')
-            .setFooter('Developer: Tomvargas')
-            .setDescription(data)
+            .setFooter(`Player ID: ${message.author.id}`)
+            .setDescription(data + "\n>> Reporta un problema al [desarrollador](https://github.com/Tomvargas/underworld/issues)")
             .setColor('0x30c567');
         message.channel.send(embd);
     }
@@ -104,7 +104,7 @@ client.on("message", function (message) {
                 }
                 else
                 {
-                    const data = `:flame: Victorias: ${row.wins}\n:skull: Muertes: ${row.deaths}\n<<STATUS>>\n:fleur_de_lis: Nivel: ${row.lvl}\n:crossed_swords: Atack:  ${row.atk}\n:shield: Defence:  ${row.def}\n=================\n:moneybag: Coins:  ${row.coins}`;
+                    const data = `:flame: Victorias: ${row.wins}\n:skull: Muertes: ${row.deaths}\n**<<estatus>>**\n:fleur_de_lis: Nivel: ${row.lvl}\n:crossed_swords: Atack:  ${row.atk}\n:shield: Defence:  ${row.def}\n**<<equipamiento>>**\nArma id:  ${row.weaponID}\nArmadura id:  ${row.armorID}\n=================\n:moneybag: Coins:  ${row.coins}`;
                     const embed = new Discord.MessageEmbed()
                         .setTitle('=================\n' + ':ninja:  ' + row.name + '\n=================')
                         .setColor(0x20c9e4).setDescription(data)
