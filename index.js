@@ -99,15 +99,22 @@ client.on("message", function (message) {
                 // If row not found, create it
                 if (err) {
                     const embd = new Discord.MessageEmbed().setTitle('Hola ' + user + ', debes estar en player mode.')
-                        .setFooter('Mas info "System help"');
+                        .setFooter('Mas info ```+help```');
                     message.channel.send(embd);
                 }
                 else
                 {
-                    const data = `:flame: Victorias: ${row.wins}\n:skull: Muertes: ${row.deaths}\n**<<estatus>>**\n:fleur_de_lis: Nivel: ${row.lvl}\n:crossed_swords: Atack:  ${row.atk}\n:shield: Defence:  ${row.def}\n**<<equipamiento>>**\nArma id:  ${row.weaponID}\nArmadura id:  ${row.armorID}\n=================\n:moneybag: Coins:  ${row.coins}`;
+                    const metrics = `:flame: Victorias: ${row.wins}\n:skull: Muertes: ${row.deaths}`;
+                    const status = `:fleur_de_lis: Nivel: ${row.lvl}\n:crossed_swords: Atack:  ${row.atk}\n:shield: Defence:  ${row.def}`;
+                    const equip = `Arma id:  ${row.weaponID}\nArmadura id:  ${row.armorID}`;
+                    const coins = `:moneybag: Coins:  ${row.coins}`;
                     const embed = new Discord.MessageEmbed()
                         .setTitle('=================\n' + ':ninja:  ' + row.name + '\n=================')
-                        .setColor(0x20c9e4).setDescription(data)
+                        .setColor(0x20c9e4)
+                        .addField('>> métricas', metrics)
+                        .addField('>> estatus', status)
+                        .addField('>> equipamiento', equip)
+                        .addField('>> balance', coins)
                         .setThumbnail(imgurl).setFooter(`.............................\nPlayer ID: ${row.id}`);
  
                     // Send the embed to the same channel as the message
@@ -118,6 +125,14 @@ client.on("message", function (message) {
 
         
     }
+    //------------------------------------------------------------------------------> System combat
+    else if (command.toLowerCase() === "combatinfo") {
+        const embed = new Discord.MessageEmbed()
+        .addField('hola', 'como estas')
+        .addField('aquí', 'esta el otro')
+        message.channel.send(embed);
+    }
+
     //------------------------------------------------------------------------------> System command
     
 });
