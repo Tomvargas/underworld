@@ -109,7 +109,7 @@ client.on("message", function (message) {
                     const equip = `Arma id:  ${row.weaponID}\nArmadura id:  ${row.armorID}`;
                     const coins = `:moneybag: Coins:  ${row.coins}`;
                     const embed = new Discord.MessageEmbed()
-                        .setTitle('=================\n' + ':ninja:  ' + row.name + '\n=================')
+                        .setTitle('=================\n' + ':bust_in_silhouette:  ' + row.name + '\n=================')
                         .setColor(0x20c9e4)
                         .addField('>> métricas', metrics)
                         .addField('>> estatus', status)
@@ -128,13 +128,17 @@ client.on("message", function (message) {
     //------------------------------------------------------------------------------> System combat
     else if (command.toLowerCase() === "combatinfo") {
         const embed = new Discord.MessageEmbed()
-        .addField('hola', 'como estas')
         .addField('aquí', 'esta el otro')
+        .addField('¿cómo empezar un combate?', 'primero debes utilizar el comando ```combat <taguser>``` luego de eso debes esperar que el usuario etiquetado responda con una opción, si el usuario lo hace se entrará en combate.\nDebes tener en cuenta que los mensajes de otos usuarios serán eliminados durante el combate por lo que se recomienda al admin del server un canal especifico para combates :sunglasses:')
+            .addField('Entorno de combate', '```Al comenzar el combate solo se mostrarán los mensajes de los participantes, los mensajes de los demás usuarios se eliminarán automaticamente.```\n```El primer turno será del jugador que se retó.```\n```Aparecerán las opciones para elegir que skill utilizar.```\n```Cada skill hará daño equivalente al ataque actual del jugador y característica de la skill.```\n```Al recibir daño del oponente se restará los puntos de vida con los puntos de ataque del oponente restados con los puntos de defenza del atacado.```\n```Un combate termina cuando la vida de uno de los dos llegue a 0```')
+        .setFooter('Para sugerencias o reporte de errores ve a < github.com/Tomvargas/underworld/issues >');
+        
         message.channel.send(embed);
     }
-
+    
     //------------------------------------------------------------------------------> System command
     
 });
+
 
 client.login(config.BOT_TOKEN);
