@@ -15,7 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^12.5.0",
-    "sqlite": "^4.0.17",
+    "sqlite": "^4.0.18",
+    "sqlite.js": "0.0.2-security",
     "sqlite3": "^5.0.0"
   }
 }
