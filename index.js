@@ -17,8 +17,6 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
-
-
 //read each message in server
 
 client.on("message", function (message) {
