@@ -5,7 +5,7 @@ const config = require("./config.json");
 
 const prefix = "+";
 
-//declare new discord client
+// declare new discord client
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
