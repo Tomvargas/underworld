@@ -14,8 +14,8 @@
   "author": "\"Tomas \\ <tomvargasd@gmail.com\\>",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.0",
-    "sqlite": "^4.0.18",
+    "discord.js": "^12.5.1",
+    "sqlite": "^4.0.19",
     "sqlite.js": "0.0.2-security",
     "sqlite3": "^5.0.0"
   }
