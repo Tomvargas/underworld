@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 const fs = require('fs');
 const config = require("./config.json");
 
-const prefix = "+";
+var prefix = config.PREFIX;
 
 // declare new discord client
 
