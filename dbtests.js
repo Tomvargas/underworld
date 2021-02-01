@@ -47,16 +47,25 @@ let db = new sqlite3.Database('./database/data.db', sqlite3.OPEN_READWRITE, (err
 db.run('DELETE FROM players WHERE id="764295482078920734"');
 //eliminar tabla
     db.run('DROP TABLE players')
-    
-*/
-
 
 db.run('CREATE TABLE IF NOT EXISTS players (id TEXT PRIMARY KEY NOT NULL, name TEXT NOT NULL, deaths INTEGER NOT NULL, wins INTEGER NOT NULL, ph INTEGER NOT NULL, lvl INTEGER NOT NULL, coins INTEGER NOT NULL, weaponID TEXT, armorID TEXT, skill1 TEXT,skill2 TEXT,skill3 TEXT, atk INTEGER NOT NULL, def INTEGER NOT NULL, bagID TEXT NOT NULL)', (err) => {
     if (err) {
         console.log('ERROR!', err)
     }
 }) 
+    
 
+
+
+
+
+--------------- INSERTAR DATOS A LA TABLA SKILLS -- IMPLEMENTAR PROPIEDADES DE HABILIDAD
+db.run('INSERT INTO skills (id, name, desc) VALUES (?, ?, ?)', ['id', 'name', 'desc'], (err) => {
+    if (err) {
+        console.log('ERROR!', err)
+    }
+})
+*/
 
 
 

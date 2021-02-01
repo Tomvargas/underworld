@@ -18,17 +18,17 @@ module.exports = {
                 }
                 else
                 {
-                    const metrics = `:flame: Victorias: ${row.wins}\n:skull: Muertes: ${row.deaths}`;
-                    const status = `:fleur_de_lis: Nivel: ${row.lvl}\n:crossed_swords: Atack:  ${row.atk}\n:shield: Defence:  ${row.def}`;
-                    const equip = `Arma id:  ${row.weaponID}\nArmadura id:  ${row.armorID}`;
-                    const coins = `:moneybag: Coins:  ${row.coins}`;
+                    const metrics = `:flame: Victorias: ${row.wins}\n:skull: Muertes: ${row.deaths}\n---------------------\n`;
+                    const status = `:fleur_de_lis: Nivel: ${row.lvl}\n:crossed_swords: Atack:  ${row.atk}\n:shield: Defence:  ${row.def}\n---------------------\n`;
+                    const equip = `Arma id:  ${row.weaponID}\nArmadura id:  ${row.armorID}\n---------------------\n`;
+                    const coins = `:moneybag: Coins:  ${row.coins}\n`;
                     const embed = new Discord.MessageEmbed()
                         .setTitle('=================\n' + ':bust_in_silhouette:  ' + row.name + '\n=================')
                         .setColor(0x20c9e4)
-                        .addField('>> métricas', metrics)
-                        .addField('>> estatus', status)
-                        .addField('>> equipamiento', equip)
-                        .addField('>> balance', coins)
+                        .addField('MÉTRICAS', metrics)
+                        .addField('ESTADO', status)
+                        .addField('EQUIPAMIENTO', equip)
+                        .addField('BALANCE', coins)
                         .setThumbnail(imgurl).setFooter(`.............................\nPlayer ID: ${row.id}`);
  
                     // Send the embed to the same channel as the message
