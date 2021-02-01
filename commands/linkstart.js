@@ -33,7 +33,7 @@ module.exports = {
                             {
                                 db.run('INSERT INTO players (id, name, deaths, wins, ph, lvl, coins, weaponID, armorID, skill1, skill2, skill3, atk, def, bagID) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [String(userid), String(user), 0, 0, 100, 1, 0, String(wea.id), String(arm.id), String(skill.id), String(skill.id), String(skill.id), wea.atk, arm.def, userid], (err) => {
                                     if (err) {
-                                        const embd = new Discord.MessageEmbed().setTitle('Hola ' + user + ', ya estas en player mode.')
+                                        const embd = new Discord.MessageEmbed().setTitle('Hey ' + user + ', ya estás registrad@.')
                                             .setFooter('Mas info "System help"');
                                         message.channel.send(embd);
                                     }
