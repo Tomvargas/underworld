@@ -5,7 +5,9 @@ CHAT BOT FOR DISCORD APP BUILT WITH NODE.JS AND DISCORD.JS
 > <img height="20" src="https://www.adkgamers.com/uploads/monthly_2018_01/discordemoji.png.d4595464f83db5678588ae9a56e2509a.png" > This bot is in development and the beta version will be out soon
 
 ## FEATURES <img src="https://i.pinimg.com/originals/03/c4/3b/03c43bf25c8d06c97a8e31202bdd6150.gif" height="50" >
-> The prefix is ```+``` but can will be ```System``` on first deploy.
+
+The prefix is ```+``` but can will be ```System``` on first deploy.
+
 ### COMMANDS
 #### help
 > This command shows you a brief information about the bot and some commands that are useful to start using the bot.
