@@ -10,7 +10,7 @@ let db = new sqlite3.Database('./database/data.db', sqlite3.OPEN_READWRITE, (err
 /*
 //crear tabla
     db.run('CREATE TABLE IF NOT EXISTS players (id TEXT PRIMARY KEY NOT NULL, name TEXT NOT NULL,ph INTEGER NOT NULL, lvl INTEGER NOT NULL, coins INTEGER NOT NULL, weaponID TEXT, armorID TEXT, skill1 TEXT,skill2 TEXT,skill3 TEXT, atk INTEGER NOT NULL, def INTEGER NOT NULL, bagID TEXT NOT NULL)', (err) => {
-    if (err) {
+    if (err) {  
         console.log('ERROR!', err)
     }
 })

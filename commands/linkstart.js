@@ -9,7 +9,7 @@ module.exports = {
         const user = message.author.username;
         const imgurl = message.author.displayAvatarURL();
         //insertar datos a la tabla
-        db.all(`SELECT id FROM skills`, function (err, skill) {
+        db.all(`SELECT id FROM skills where id='001'`, function (err, skill) {
             // If row not found, create it
             if (err) {
                 console.log(`error: ` + err);
