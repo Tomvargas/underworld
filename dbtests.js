@@ -60,11 +60,18 @@ db.run('CREATE TABLE IF NOT EXISTS players (id TEXT PRIMARY KEY NOT NULL, name T
 
 
 --------------- INSERTAR DATOS A LA TABLA SKILLS -- IMPLEMENTAR PROPIEDADES DE HABILIDAD
-db.run('INSERT INTO skills (id, name, desc) VALUES (?, ?, ?)', ['id', 'name', 'desc'], (err) => {
-    if (err) {
-        console.log('ERROR!', err)
-    }
-})
+var ids = ['016', '017', '018', '019', '020', '021', '022', '023', '024', '025', '026', '027', '028', '029', '030', '031', '032'];
+var names = ['Infernal thunder', 'Direct thunder', 'Thunder god attack', 'Flare', 'Assasin flare', 'Final flare', 'Apocalyptic flare', 'Dark flames', 'Minimal vortex', 'Vortex attack', 'Upward vortex', 'Endless vortex', 'Gluttony', 'Dark gluttony', 'Forward storm', 'Absolute calm', 'Final punishment'];
+var descs = ['Trueno infernal, Atraviesa sus escudos y quita 37 pts de daño.', 'Trueno directo, No hay escapatoria, el oponente recive 40 pts de daño.', 'Ataque del dios del trueno, Es inevitable, Golpea a tu enemigo con 50 pts de daño y parálisis por un turno.', 'Flama, Quema a tu enemigo con 35 pts y se extiende hasta el siguiente turno provocando 15 pts de daño más.', 'Flama asesina, Quema a tu enemigo con 30 pts y se extiende hasta el siguiente turno con 30 pts de daño más.', 'Última flama, Poderosa quemadura que quita 50 pts de vida al oponente.', 'Flama apocalíptica que provoca 30 pts de vida y los dos siguientes turnos quita entre 10 y 20 pts de vida.', 'Flamas oscuras, Provoca una quemadura grave que quita 60 pts de vida.', 'Vortice minimo, Daña a tu oponente con 50 pts de vida.', 'Ataque del vortice, Provoca un daño de 55 pts.', 'Vortice ascendente, Este ataque daña a tu oponente con un  daño de 50 a 70 pts.', 'Vortice interminable, Provoca 3 ataques del vortice con un daño individual de 30 a 50 pts.', 'Absorve 20% de la vida de tu oponente.', 'Absorve el 50% de la vida de tu oponente y provocas 10 pts de daño adicional.', 'Tormenta frontal, Provoca de 10 a 75 pts de daño.', 'Eres inmune a cualquier ataque por un turno.', 'Castigo final, sacrifica el 50% de tu vida y provoca un daño del 90% a tu oponente.'];
+var i = 0;
+while(i<ids.length){
+    db.run('INSERT INTO skills (id, name, description) VALUES (?, ?, ?)', [ids[i].toString(), names[i].toString(), descs[i].toString()], (err) => {
+        if (err) {
+            console.log('ERROR!', err)
+        }
+    })
+    i++;
+}
 */
 
 
