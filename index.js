@@ -24,8 +24,7 @@ client.on("message", function (message) {
     if (message.author.bot) return;
     if (!message.content.startsWith(prefix)) return;// read if message start with prefix
     
-    const commandBody = message.content.slice(prefix.length);
-    const args = commandBody.split(/ +/);
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
 /*
@@ -41,6 +40,9 @@ client.on("message", function (message) {
     }
     else if(command.toLowerCase() === "help"){
         client.commands.get('help').execute(message, command);
+    }
+    else if(command.toLowerCase() === "skill" || command.toLowerCase() === "s"){
+        client.commands.get('helpSkills').execute(message, args);
     }
     else if(command.toLowerCase() === "combatinfo"){
         client.commands.get('combatinfo').execute(message, command);

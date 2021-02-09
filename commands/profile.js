@@ -8,6 +8,7 @@ module.exports = {
 		const userid = message.author.id;
         const user = message.author.username;
         const imgurl = message.author.displayAvatarURL();
+        console.log(`SELECT * FROM skills WHERE id=${userid}`);
 
         db.get(`SELECT * FROM players WHERE id=${userid}`,function (err, row) {
                 // If row not found, create it
