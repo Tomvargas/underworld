@@ -13,6 +13,8 @@ The prefix is ```+``` but can will be ```System``` on first deploy.
 > This command shows you a brief information about the bot and some commands that are useful to start using the bot.
 #### combatinfo
 > This command displays detailed information about the combat system and its rules.
+#### skill ```<skill-id>```
+> this command shows you a description of a skill passing the number of this skill.
 #### avatar
 > Can not miss the famous command to show the avatar to others.
 #### linkstart
