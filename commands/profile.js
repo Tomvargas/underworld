@@ -20,7 +20,7 @@ module.exports = {
                 else
                 {
                     const metrics = `:flame: Victorias: ${row.wins}\n:skull: Muertes: ${row.deaths}\n---------------------\n`;
-                    const status = `:fleur_de_lis: Nivel: ${row.lvl}\n:crossed_swords: Atack:  ${row.atk}\n:shield: Defence:  ${row.def}\n---------------------\n`;
+                    const status = `:fleur_de_lis: Level: ${row.lvl}\n:crossed_swords: Atack:  ${row.atk}\n:shield: Defence:  ${row.def}\n---------------------\n`;
                     const equip = `Arma id:  ${row.weaponID}\nArmadura id:  ${row.armorID}\n---------------------\n`;
                     const coins = `:moneybag: Coins:  ${row.coins}\n`;
                     const embed = new Discord.MessageEmbed()

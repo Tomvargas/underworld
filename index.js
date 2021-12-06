@@ -33,7 +33,7 @@ client.on("message", function (message) {
     ============================================================================
 */
 
-    //------------------------------------------------------------------------------> System avatar
+    //------------------------------------------------------------------------------> User avatar
     if (command.toLowerCase() === "avatar") {
         const avatar = new Discord.MessageAttachment(message.author.displayAvatarURL());
         message.channel.send(avatar);
