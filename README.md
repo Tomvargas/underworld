@@ -1,4 +1,4 @@
-# UNDERWORLD - DISCORD BOT <img width="80" src="https://i.pinimg.com/originals/45/41/43/45414373211525c8c91d2fd8be5f23dc.gif"></img>
+# UNDERWORLD - DISCORD BOT <img width="80" src="https://i.pinimg.com/originals/45/41/43/45414373211525c8c91d2fd8be5f23dc.gif" />
 CHAT BOT FOR DISCORD APP BUILT WITH NODE.JS AND DISCORD.JS
 
 
